@@ -1,0 +1,16 @@
+import React from 'react'
+import MathJax from 'react-mathjax'
+
+const tex = String.raw`Initialising\,result\,as\,identity\,matrix\\I=\,\begin{vmatrix}1 & 0 & 0 & 0 \cr 0 & 1 & 0 & 0 \cr 0 & 0 & 1 & 0 \cr 0 & 0 & 0 & 1\end{vmatrix}\\Setting\,result\,as\,(result*A^{1})\,=\,A^{1}\\=\begin{vmatrix}1 & 0 & 0 & 0 \cr 0 & 1 & 0 & 0 \cr 0 & 0 & 1 & 0 \cr 0 & 0 & 0 & 1\end{vmatrix}*\begin{vmatrix}4 & 3 & 1 & 5 \cr 2 & 5 & 1 & 4 \cr 3 & 3 & 2 & 1 \cr 1 & 4 & 2 & 3\end{vmatrix}\\=\begin{vmatrix}4 & 3 & 1 & 5 \cr 2 & 5 & 1 & 4 \cr 3 & 3 & 2 & 1 \cr 1 & 4 & 2 & 3\end{vmatrix}\\Calculating\,A^{2}\\=\begin{vmatrix}4 & 3 & 1 & 5 \cr 2 & 5 & 1 & 4 \cr 3 & 3 & 2 & 1 \cr 1 & 4 & 2 & 3\end{vmatrix}*\begin{vmatrix}4 & 3 & 1 & 5 \cr 2 & 5 & 1 & 4 \cr 3 & 3 & 2 & 1 \cr 1 & 4 & 2 & 3\end{vmatrix}\\=\begin{vmatrix}30 & 50 & 19 & 48 \cr 25 & 50 & 17 & 43 \cr 25 & 34 & 12 & 32 \cr 21 & 41 & 15 & 32\end{vmatrix}\\Setting\,result\,as\,(result*A^{2})\,=\,A^{3}\\=\begin{vmatrix}4 & 3 & 1 & 5 \cr 2 & 5 & 1 & 4 \cr 3 & 3 & 2 & 1 \cr 1 & 4 & 2 & 3\end{vmatrix}*\begin{vmatrix}30 & 50 & 19 & 48 \cr 25 & 50 & 17 & 43 \cr 25 & 34 & 12 & 32 \cr 21 & 41 & 15 & 32\end{vmatrix}\\=\begin{vmatrix}325 & 589 & 214 & 513 \cr 294 & 548 & 195 & 471 \cr 236 & 409 & 147 & 369 \cr 243 & 441 & 156 & 380\end{vmatrix}\\Calculating\,A^{4}\\=\begin{vmatrix}30 & 50 & 19 & 48 \cr 25 & 50 & 17 & 43 \cr 25 & 34 & 12 & 32 \cr 21 & 41 & 15 & 32\end{vmatrix}*\begin{vmatrix}30 & 50 & 19 & 48 \cr 25 & 50 & 17 & 43 \cr 25 & 34 & 12 & 32 \cr 21 & 41 & 15 & 32\end{vmatrix}\\=\begin{vmatrix}3633 & 6614 & 2368 & 5734 \cr 3328 & 6091 & 2174 & 5270 \cr 2572 & 4670 & 1677 & 4070 \cr 2702 & 4922 & 1756 & 4275\end{vmatrix}\\Calculating\,A^{8}\\=\begin{vmatrix}3633 & 6614 & 2368 & 5734 \cr 3328 & 6091 & 2174 & 5270 \cr 2572 & 4670 & 1677 & 4070 \cr 2702 & 4922 & 1756 & 4275\end{vmatrix}*\begin{vmatrix}3633 & 6614 & 2368 & 5734 \cr 3328 & 6091 & 2174 & 5270 \cr 2572 & 4670 & 1677 & 4070 \cr 2702 & 4922 & 1756 & 4275\end{vmatrix}\\=\begin{vmatrix}56793845 & 103595844 & 37021820 & 89838012 \cr 52192540 & 95203193 & 34022456 & 82559752 \cr 40196220 & 73320308 & 26202325 & 63583388 \cr 42264264 & 77093000 & 27550476 & 66854753\end{vmatrix}\\Setting\,result\,as\,(result*A^{8})\,=\,A^{11}\\=\begin{vmatrix}325 & 589 & 214 & 513 \cr 294 & 548 & 195 & 471 \cr 236 & 409 & 147 & 369 \cr 243 & 441 & 156 & 380\end{vmatrix}*\begin{vmatrix}56793845 & 103595844 & 37021820 & 89838012 \cr 52192540 & 95203193 & 34022456 & 82559752 \cr 40196220 & 73320308 & 26202325 & 63583388 \cr 42264264 & 77093000 & 27550476 & 66854753\end{vmatrix}\\=\begin{vmatrix}79482964197 & 144982584889 & 51812009822 & 125728381149 \cr 73043633594 & 133236790960 & 47614448539 & 115542468947 \cr 56254454036 & 102612127397 & 36670201443 & 88984871293 \cr 59148845115 & 107891706253 & 38556948936 & 93563302216\end{vmatrix}\\\therefore\,A^{11}\,=\,\begin{vmatrix}79482964197 & 144982584889 & 51812009822 & 125728381149 \cr 73043633594 & 133236790960 & 47614448539 & 115542468947 \cr 56254454036 & 102612127397 & 36670201443 & 88984871293 \cr 59148845115 & 107891706253 & 38556948936 & 93563302216\end{vmatrix}`
+ 
+const Math = () => {
+    return (
+        <MathJax.Provider>
+            <div>
+                <MathJax.Node formula={tex} />
+            </div>
+        </MathJax.Provider>
+    );
+}
+
+export default Math
