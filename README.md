@@ -2,6 +2,10 @@
 
 Main repo for all frontend activity
 
+WIP.
+Current progress:
+2d and 3d plotter implemented
+
 ## Get Started
 
 Clone this repo
